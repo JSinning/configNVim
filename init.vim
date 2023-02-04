@@ -1,3 +1,22 @@
+ 
+" Usar vim Plug e install los plugs necesarios dla system
+call plug#begin('~/.local/share/nvim/plugged')
+" Aquí irán los plugins a instalar
+
+" Plug 'tpope/vim-surround'  " Plug prueba
+
+Plug 'joshdick/onedark.vim' "Tema one Dark Atom
+
+
+
+
+
+call plug#end()
+
+
+"Configuration general
+" =P
+
 set title " muestra el nombre del archivo en ña ventana de la treminal
 set number " muestra el numero del la linea
 set mouse=a " Preminte la inracion con el mouse (selecionar texto y mover mouse
@@ -26,7 +45,7 @@ set spelllang=en,es " corige plabras  usando dicionario de ingle y español
 
 set termguicolors " Activa el true en el color de la treminal
 set background=dark " Fonde del tema: ligth or dark
-colorscheme darkblue "  tema del name
+colorscheme onedark "  tema del name
 
 
 " definiendo la tecal lider and los atajos
@@ -55,12 +74,27 @@ vnoremap <leader>p
 nnoremap <leader>P
 vnoremap <leader>P
 
+"leader + c  for copi fo xclip
+vnoremap <leader>c :!xclip -f -sel clip<CR>
+nnoremap <leader>c :!xclip -f -sel clip<CR>
 
-"leader +  l + kpara cambiar de burfer
+"leader + v for page of xclip: 
+vnoremap <leader>c :!xclip -f -sel clip<CR>
+nnoremap <leader>v :-1r !xclip -o -sel clip<CR>
+
+" chaged buffer
 nnoremap <leader>l :bnext<CR>
 nnoremap <leader>j :bprevious<CR>
 
 " salir del buffer actual
 nnoremap <leader>q :bdelete<CR>
+
+
+
+
+
+
+
+
 
 
